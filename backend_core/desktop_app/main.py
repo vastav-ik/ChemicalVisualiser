@@ -12,6 +12,10 @@ from matplotlib.figure import Figure
 
 API_BASE = "http://127.0.0.1:8000"
 
+<<<<<<< HEAD
+=======
+# --- STYLESHEET ---
+>>>>>>> 005a5118d8a91a8356cf366e6e2799e5ca399b87
 STYLESHEET = """
 QMainWindow {
     background-color: #2b2b2b;

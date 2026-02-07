@@ -1,5 +1,6 @@
 # Chemical Equipment Parameter Visualizer
 
+<<<<<<< HEAD
 A hybrid application for analyzing and visualizing chemical equipment data.
 
 ## features
@@ -7,6 +8,15 @@ A hybrid application for analyzing and visualizing chemical equipment data.
 - **Dual Frontend**: Web (React) and Desktop (PyQt5).
 - **Data Analysis**: Upload CSV to analyze Pressure, Temperature, and Equipment Type distribution.
 - **Visualization**: Interactive charts.
+=======
+A hybrid application (Web + Desktop) for analyzing and visualizing chemical equipment data.
+
+## features
+
+- **Dual Frontend**: Web (React) and Desktop (PyQt5) clients.
+- **Data Analysis**: Upload CSV to analyze Pressure, Temperature, and Equipment Type distribution.
+- **Visualization**: Interactive charts (Chart.js for Web, Matplotlib for Desktop).
+>>>>>>> 005a5118d8a91a8356cf366e6e2799e5ca399b87
 - **History**: View last 5 uploaded datasets.
 - **Raw Data**: Inspect raw CSV data in tabular format.
 - **PDF Reports**: Download analysis reports.
@@ -44,6 +54,10 @@ A hybrid application for analyzing and visualizing chemical equipment data.
 5.  Create a superuser (admin):
     ```bash
     python create_superuser.py
+<<<<<<< HEAD
+=======
+    # Or manually: python manage.py createsuperuser
+>>>>>>> 005a5118d8a91a8356cf366e6e2799e5ca399b87
     ```
 6.  Start the server:
     ```bash
@@ -75,6 +89,7 @@ A hybrid application for analyzing and visualizing chemical equipment data.
     cd backend_core
     ```
 3.  Run the desktop application:
+<<<<<<< HEAD
 
     ```bash
     python desktop_app/main.py
@@ -90,3 +105,13 @@ A hybrid application for analyzing and visualizing chemical equipment data.
 ## Sample Data
 
 Used `sample_equipment_data.csv` or any CSV with columns: `Type`, `Pressure`, `Temperature`, `Flowrate`.
+=======
+    ```bash
+    python desktop_app/main.py
+    ```
+4.  Login with your superuser credentials.
+
+## Sample Data
+
+Use `sample_equipment_data.csv` (if provided) or any CSV with columns: `Type`, `Pressure`, `Temperature`, `Flowrate`.
+>>>>>>> 005a5118d8a91a8356cf366e6e2799e5ca399b87
