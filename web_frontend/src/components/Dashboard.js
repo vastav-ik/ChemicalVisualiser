@@ -18,7 +18,7 @@ const Dashboard = ({ token, setToken }) => {
   const fetchHistory = async () => {
     try {
       const res = await axios.get(
-        "http://127.0.0.1:8000/api/history/",
+        `${process.env.REACT_APP_API_URL}/api/history/`,
         getAuthHeaders(),
       );
       setHistory(res.data);
@@ -44,7 +44,7 @@ const Dashboard = ({ token, setToken }) => {
 
     try {
       const res = await axios.post(
-        "http://127.0.0.1:8000/api/upload/",
+        `${process.env.REACT_APP_API_URL}/api/upload/`,
         formData,
         {
           headers: {
@@ -75,7 +75,7 @@ const Dashboard = ({ token, setToken }) => {
   const fetchRawData = async (id) => {
     try {
       const res = await axios.get(
-        `http://127.0.0.1:8000/api/analysis/${id}/data/`,
+        `${process.env.REACT_APP_API_URL}/api/analysis/${id}/data/`,
         getAuthHeaders(),
       );
       setRawData(res.data);
@@ -107,7 +107,7 @@ const Dashboard = ({ token, setToken }) => {
   const handleDownloadPDF = async () => {
     try {
       const response = await axios.get(
-        `http://127.0.0.1:8000/api/analysis/${data.id}/pdf/`,
+        `${process.env.REACT_APP_API_URL}/api/analysis/${data.id}/pdf/`,
         {
           headers: { Authorization: `Token ${token}` },
           responseType: "blob",
