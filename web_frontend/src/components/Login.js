@@ -10,7 +10,7 @@ const Login = ({ setToken }) => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_API_URL}/api-token-auth/`,
+        "http://127.0.0.1:8000/api-token-auth/",
         {
           username,
           password,

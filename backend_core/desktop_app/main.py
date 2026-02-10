@@ -1,6 +1,8 @@
 import sys
 import requests
 import webbrowser
+
+API_BASE = "http://127.0.0.1:8000"
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QPushButton, 
                              QVBoxLayout, QHBoxLayout, QWidget, QFileDialog, QLabel, QMessageBox,
                              QTabWidget, QLineEdit, QDialog, QListWidget, QTableWidget, 
@@ -10,7 +12,6 @@ from PyQt5.QtGui import QIcon, QFont
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
 
-# --- STYLESHEET ---
 STYLESHEET = """
 QMainWindow {
     background-color: #2b2b2b;
@@ -160,7 +161,6 @@ class LoginDialog(QDialog):
 
 class MplCanvas(FigureCanvas):
     def __init__(self, parent=None, width=5, height=4, dpi=100):
-        # Dark theme for Matplotlib
         with plt.style.context('dark_background'):
             self.fig = Figure(figsize=(width, height), dpi=dpi, facecolor='#2b2b2b')
             self.axes = self.fig.add_subplot(111)

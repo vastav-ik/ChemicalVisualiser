@@ -4,7 +4,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+SECRET_KEY = 'c$pvceb620e!y-za=i9!2$=y=&maxcfd^s(y35*d-r6jnypg2o'
 
 
 
